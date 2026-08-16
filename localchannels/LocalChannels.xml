@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>LocalChannels</Name>
+  <Repository>ghcr.io/moonpudding/localchannels:latest</Repository>
+  <Registry>https://github.com/moonpudding?tab=packages&amp;amp;repo_name=localchannels</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <MyMAC/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <ReadMe/>
+  <Overview>Your own video library, with channels. Point LocalChannels at a folder of videos and it turns them into a browsable, searchable, taggable library with a built-in player &#x2014; then shuffles any folder or set of tags into an endless channel that plays like a TV station.&#13;
+&#13;
+It's self-hosted and offline by default: no accounts, no cloud, no telemetry. Your files stay exactly where they are, and nothing leaves the machine unless you explicitly ask it to (the optional AI summaries and update check are the only two things that ever talk to the outside world).&#13;
+&#13;
+Why you might want it&#13;
+&#x1F4C1; It works with your folders as-is. No importing, no renaming, no library format to convert to. Your directory structure is the navigation.&#13;
+&#x1F4FA; Channel mode. Pick a folder or a few tags and just let it play &#x2014; shuffled without repeats until everything has aired.&#13;
+&#x1F3F7;&#xFE0F; Tags that live in your filenames. Read tags out of Title [TAG1 TAG2].mp4, or write them back into the filenames, so your organisation survives even without the database.&#13;
+&#x25B6;&#xFE0F; Picks up where you left off, per video, with watch history and favorites.&#13;
+&#x1F97D; Real VR playback, including immersive WebXR sessions on a headset.&#13;
+&#x1F3A8; Nine themes, dark and light.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/moonpudding/localchannels/refs/heads/main/logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1786898176</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Site name" Target="LOCALCHANNELS_SITE_NAME" Default="LocalChannels" Mode="" Description="Set name of the site" Type="Variable" Display="always" Required="true" Mask="false">LocalChannels</Config>
+  <Config Name="Port" Target="8000" Default="8000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
+  <Config Name="Authentication enabled" Target="LOCALCHANNELS_AUTH_ENABLED" Default="false" Mode="" Description="To enable password protection set this value to true" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Authentication password" Target="LOCALCHANNELS_PASSWORD" Default="" Mode="" Description="Set the authentication password" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Path to application data" Target="/data" Default="/mnt/user/appdata/localchannels/data" Mode="rw" Description="This path is where the application data like database and thumbnails are saved." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/localchannels/data</Config>
+  <Config Name="Path to videos" Target="/videos" Default="/mnt/user/appdata/localchannels/videos" Mode="rw" Description="Point this path to the root folder of the videos you want to use with LocalChannels" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/localchannels/videos</Config>
+  <TailscaleStateDir/>
+</Container>
